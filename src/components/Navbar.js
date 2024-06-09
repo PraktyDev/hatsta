@@ -8,7 +8,7 @@ import { BiMenu } from "react-icons/bi";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center py-5 px-10 sticky z-50 ">
+    <div className="flex justify-between items-center p-5 sticky z-50 ">
       <Image className="w-20 h-auto" src={"/assets/images/hatsta.png"} width={246} height={55} alt="hatsta logo"/>
       <div className="hidden laptop:flex gap-4">
         <nav className="flex gap-4">
