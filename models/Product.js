@@ -13,10 +13,12 @@ const ProductSchema = new Schema({
         type: String,
         required: [true, 'Enter product amount']
     },
-    // image: {
-    //     type: String,
-    //     // required: [true, 'Enter product image']
-    // },
+    image: {
+        type: String,
+    },
+    publicId: {
+        type: String,
+    },
 },{ timestamps: true });
 
 export const Product = models?.Product || model("Product", ProductSchema)
