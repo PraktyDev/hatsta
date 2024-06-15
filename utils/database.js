@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const connectToDB = async () => {
+export const ConnectToDB = async () => {
     const connectionState = mongoose.connection.readyState;
 
     if(connectionState === 1) {
@@ -23,5 +23,3 @@ const connectToDB = async () => {
         throw new Error("Error: ", error)
     }
 };
-
-export default connectToDB
