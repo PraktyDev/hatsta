@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { Product } from "../../../../../models/Product";
-import connectToDB from "../../../../../utils/database";
+import { ConnectToDB } from "../../../../../utils/database";
 
 
 export const dynamic = "force-dynamic"
@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic"
 export async function GET (request, { params }){
     const productId = params.productId
     try {
-        await connectToDB();
+        await ConnectToDB();
         const product = await Product.findById(productId)
         return new NextResponse(JSON.stringify(product), { status: 200 })
     } catch (error) {

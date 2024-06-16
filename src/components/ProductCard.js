@@ -1,18 +1,19 @@
 import Image from "next/image"
 import { CardDescription, CardTitle } from "./ui/card"
 import { Separator } from "./ui/separator"
+import Link from "next/link";
 
-const ProductCard = () => {
+const ProductCard = (props) => {
   return (
     <div>
-        <div className="p-4 flex gap-7 w-[500px]">
-            <Image className="w-32 h-32 bg-[#f7f8f8] rounded-2xl" src={""} height={100} width={100} alt="product image" />
+        <Link href={`/products/${props.id}`} className="p-4 flex gap-7 w-[500px]">
+            <Image className="w-32 h-32 bg-[#f7f8f8] rounded-2xl" src={props.image} height={100} width={100} alt={props.title} />
             <div className="flex flex-col gap-2">
-                <CardTitle>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
-                <CardDescription className="font-bold text-lg">$4000</CardDescription>
+                <CardTitle>{props.title}</CardTitle>
+                <CardDescription>{props.description}</CardDescription>
+                <CardDescription className="font-bold text-lg">{props.amount}</CardDescription>
             </div>
-        </div>
+        </Link>
         <Separator />
     </div>
   )

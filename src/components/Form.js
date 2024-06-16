@@ -54,11 +54,17 @@ const Form = () => {
       return response.json({ message: "Posted Successfully" })
     } catch (error) {
       console.error('Error:', error.message)
+    } finally{
+      setTitle("")
+      setDescription("")
+      setAmount("")
+      setImage("")
+      setPublicId("")
     }
   }
 
   return (
-    <section className="p-4 mt-20 h-full max-w-xl mx-auto flex flex-col border border-blue-200 justify-between">
+    <section className="p-4 mb-10 max-w-md h-full container mx-auto flex flex-col border border-blue-200 justify-between">
       <form onSubmit={handleSubmit} className="flex flex-col gap-12">
         <div className="flex flex-col gap-4 items-center ">
           <div className="relative w-full flex items-center">
@@ -66,7 +72,7 @@ const Form = () => {
             <div className="absolute left-4 text-blue-400"><FaRegUser /></div>
           </div>        
           <div className="relative w-full flex items-center">
-            <input name="description" value={description} onChange={(e)=>setDescription(e.target.value)} className="border border-black pl-10 w-full py-2 px-4 rounded-md" type="text" placeholder="Product Description" />            
+            <textarea rows={3} name="description" value={description} onChange={(e)=>setDescription(e.target.value)} className="border border-black pl-10 w-full py-2 px-4 rounded-md" type="text" placeholder="Product Description" />            
             <div className="absolute left-4 text-blue-400"><MdOutlineLock /></div>
           </div>  
           <div className="relative w-full flex items-center">
@@ -77,7 +83,7 @@ const Form = () => {
             Add Image
             {image && (<Image src={image} fill className="absolute object-cover inset-0" alt="product" /> )}
           </CldUploadButton>
-          {publicId && (<button onClick={removeImage} className="rounded-lg py-1 px-3 bg-red-500 hover:bg-red-400 text-white">Remove Image</button>)}                         
+          {publicId && (<button onClick={removeImage} className="rounded-full py-1 px-5 bg-red-500 hover:bg-red-400 text-white">Remove Image</button>)}                         
         </div>
 
         <div className="flex flex-col gap-6 items-center">
