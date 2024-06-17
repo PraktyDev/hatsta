@@ -21,10 +21,9 @@ const Navbar = () => {
             <SheetTrigger className="flex flex-nowrap items-center gap-2" ><FaCartShopping /> Cart</SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle>Are you absolutely sure?</SheetTitle>
+                <SheetTitle>Cart Section</SheetTitle>
                 <SheetDescription>
-                  This action cannot be undone. This will permanently delete your account
-                  and remove your data from our servers.
+                  Work in Progress...
                 </SheetDescription>
               </SheetHeader>
             </SheetContent>
@@ -38,10 +37,9 @@ const Navbar = () => {
             <SheetTrigger className="flex flex-nowrap items-center gap-2" ><FaCartShopping /> Cart</SheetTrigger>
             <SheetContent className="w-1/2">
               <SheetHeader>
-                <SheetTitle>Are you absolutely sure?</SheetTitle>
+                <SheetTitle>Cart Section</SheetTitle>
                 <SheetDescription>
-                  This action cannot be undone. This will permanently delete your account
-                  and remove your data from our servers.
+                  Work in progress...
                 </SheetDescription>
               </SheetHeader>
             </SheetContent>
