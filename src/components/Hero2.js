@@ -3,6 +3,9 @@ import ProductCard from "./ProductCard"
 import { Button } from "./ui/button"
 
 const fetchProduct =async() =>{
+  if(!process.env.NEXT_PUBLIC_API_URL){
+    return null;
+  }
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`, { cache: "no-store"});
   if(!response.ok){
     throw new Error("Unable to fetch data")
