@@ -7,10 +7,11 @@ export default function Home() {
     return null;
   }
   return (
-    <main className="flex min-h-screen flex-col items-center gap-10 p-9 laptop:p-10">
+    <main className="flex min-h-screen flex-col items-center gap-10">
+      {/* p-7 laptop:p-10 */}
         <Hero1 />
-        <Hero2 />
         <Hero3 />
+        <Hero2 />
     </main>
   );
 }
